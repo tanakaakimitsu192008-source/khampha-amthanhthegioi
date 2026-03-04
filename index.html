@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Nghe nhạc theo cảm xúc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f5;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 8px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+        }
+
+        .happy {
+            background: #f39c12;
+        }
+
+        .sad {
+            background: #3498db;
+        }
+
+        .anxious {
+            background: #9b59b6;
+        }
+
+        .bored {
+            background: #7f8c8d;
+        }
+
+        .stress {
+            background: #e74c3c;
+        }
+
+        .playlist {
+            display: none;
+            background: white;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+            .playlist h2 {
+                margin-top: 0;
+            }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+            a:hover {
+                text-decoration: underline;
+                color: #e67e22;
+            }
+    </style>
+    
+</head>
+
+<body>
+  <h2>🎵 Tìm bài hát</h2>
+
+<input type="text" id="searchBox" placeholder="Nhập tên bài hát...">
+
+<ul id="songList">
+<li><a href="https://youtu.be/DcCISK3sCYg?si=Lw86KshFwMhKq6zz" target="_blank">có em</a></li>
+<li><a href="https://youtu.be/qusmHT5vNuw?si=MTQi57qiYg3FyWdT" target="_blank">ĐÂU CẦN MỘT BÀI CA TÌNH YÊU</a></li>
+            <li><a href="https://youtu.be/GgQFO8dL5XQ?si=H2pUHjHH02KfajiW" target="_blank">Thanh Xuân</a></li>
+            <li><a href="https://youtu.be/ddaEtFOsFeM?si=KjMi2pIMT3D-mzpj" target="_blank">Bài Này Chill Phết</a></li>
+            <li><a href="https://www.youtube.com/watch?v=E5kZ0X1zJwQ" target="_blank">Đi Về Nhà – Đen Vâu</a></li>
+
+<li><a href="https://youtu.be/n6Pnzi6r9NU?si=lnclFxKL61cHOYe7" target="_blank">BƯỚC QUA MÙA CÔ ĐƠN </a></li>
+            <li><a href="https://youtu.be/F5tS5m86bOI?si=8FDUK6nrxRx6KYik" target="_blank">LẠ LÙNG </a></li>
+            <li><a href="https://youtu.be/Zzn9-ATB9aU?si=GhVFTcLBHCGgt0gA" target="_blank">Nàng Thơ</a></li>
+            <li><a href="https://www.youtube.com/watch?v=5DqZ2A9z0yU" target="_blank">Có Chàng Trai Viết Lên Cây – Phan Mạnh Quỳnh</a></li>
+            <li><a href="https://youtu.be/z96SGB47Po4?si=sQrXaymRSB1-hR6S" target="_blank">HongKong1</a></li>
+       
+<li><a href="https://youtu.be/rIXhXaQ8tiM?si=ym2sD3iWF_VHSEaJ" target="_blank">ngày đầu tiên</a></li>
+            <li><a href="https://youtu.be/488ceQWoGGw?si=CqT5RMsJ-yQXb8qP" target="_blank">nắng ấm xa dần</a></li>
+            <li><a href="https://youtu.be/5e7e_KZINA4?si=LnYlDGBjsY7oBh5f" target="_blank">đưa nhau đi trốn </a></li>
+            <li><a href="https://youtu.be/wHF3Jv6Gk2o?si=CHH2H-zFjwc6gorU" target="_blank">sau tất cả </a></li>
+            <li><a href="https://youtu.be/8g5iIG2VvnQ?si=fKB-62TZZ2GSvghg" target="_blank">Bình Yên Những Phút Giây</a></li>
+        
+<li><a href="https://youtu.be/x_hU9S9iQ2g?si=ulqrwh4yLhlRp8ha" target="_blank">một mình</a></li>
+            <li><a href="https://youtu.be/gUr4qp6YGLs?si=eD3f0f2ffj_CQmrG" target="_blank">lang thang </a></li>
+            <li><a href="https://youtu.be/Ws-QlpSltr8?si=4JmSy0CKj0BeMn3S" target="_blank">trốn tìm </a></li>
+            <li><a href="https://youtu.be/g20t_K9dlhU?si=JEDG_zkWDrSrWPop" target="_blank">người lạ ơi </a></li>
+            <li><a href="https://youtu.be/LZN4I3K8SC0?si=7zIU-OaKBeTJhYUS" target="_blank">cứ chill thôi </a></li>
+      
+  <li><a href="https://youtu.be/32sYGCOYJUM?si=8q7yhFxJ_sow-Rk8" target="_blank">CHẠY NGAY ĐI</a></li>
+            <li><a href="https://youtu.be/iy53wPnNCYU?si=5eCcCAz4MBaRBuNl" target="_blank"></a>   Đi Để Trở Về </li>
+            <li><a href="https://youtu.be/Pys2iOT9rpw?si=dy5UrnyKVEZoLpgT" target="_blank">WEAN – shhhhhhh.. feat tlinh</a></li>
+            <li><a href="https://youtu.be/jgZkrA8E5do?si=gEbK7fnsypeb4cDl" target="_blank">TOULIVER x BINZ - "BIGCITYBOI"</a></li>
+            <li><a href="https://youtu.be/6t-MjBazs3o?si=1vNr4mOyUTgndSrO" target="_blank">CÓ CHẮC YÊU LÀ ĐÂY</a></li>
+        
+</ul>
+<script>
+function removeVietnameseTones(str) {
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "D");
+}
+
+const searchBox = document.getElementById("searchBox");
+const songs = document.querySelectorAll("#songList li");
+
+// Ẩn tất cả ngay từ đầu
+songs.forEach(song => {
+  song.style.display = "none";
+});
+
+searchBox.addEventListener("input", function () {
+
+  let keyword = searchBox.value.trim().toLowerCase();
+  keyword = removeVietnameseTones(keyword);
+
+  // Nếu chưa nhập gì → ẩn hết
+  if (keyword === "") {
+    songs.forEach(song => {
+      song.style.display = "none";
+    });
+    return;
+  }
+
+  songs.forEach(function(song) {
+
+    let text = song.textContent.toLowerCase();
+    text = removeVietnameseTones(text);
+
+    if (text.includes(keyword)) {
+      song.style.display = "list-item";
+    } else {
+      song.style.display = "none";
+    }
+
+  });
+
+});
+</script>
+<h1> <img src="https://uploads.onecompiler.io/44b93m868/44b93chuj/t%C3%A0i%20x%E1%BB%89u.jpg" width="40px40px" /><i>khám phá âm thanh thế giới</i> </h1>
+
+    <button class="happy" onclick="showPlaylist('happy')">😊 Vui</button>
+    <button class="sad" onclick="showPlaylist('sad')">😢 Buồn</button>
+    <button class="anxious" onclick="showPlaylist('anxious')">😟 Lo lắng</button>
+    <button class="bored" onclick="showPlaylist('bored')">😐 Chán nản</button>
+    <button class="stress" onclick="showPlaylist('stress')">😖 Stress</button>
+
+    <!-- VUI -->
+    <div id="happy" class="playlist">
+        <h2>😊 Nhạc khi vui</h2>
+        <ul>
+            <li><a href="https://youtu.be/DcCISK3sCYg?si=Lw86KshFwMhKq6zz" target="_blank">có em</a></li>
+            <li><a href="https://youtu.be/qusmHT5vNuw?si=MTQi57qiYg3FyWdT" target="_blank">ĐÂU CẦN MỘT BÀI CA TÌNH YÊU</a></li>
+            <li><a href="https://youtu.be/GgQFO8dL5XQ?si=H2pUHjHH02KfajiW" target="_blank">Thanh Xuân</a></li>
+            <li><a href="https://youtu.be/ddaEtFOsFeM?si=KjMi2pIMT3D-mzpj" target="_blank">Bài Này Chill Phết</a></li>
+            <li><a href="https://www.youtube.com/watch?v=E5kZ0X1zJwQ" target="_blank">Đi Về Nhà – Đen Vâu</a></li>
+        </ul>
+    </div>
+
+    <!-- BUỒN -->
+    <div id="sad" class="playlist">
+        <h2>😢 Nhạc khi buồn</h2>
+        <ul>
+            <li><a href="https://youtu.be/n6Pnzi6r9NU?si=lnclFxKL61cHOYe7" target="_blank">BƯỚC QUA MÙA CÔ ĐƠN </a></li>
+            <li><a href="https://youtu.be/F5tS5m86bOI?si=8FDUK6nrxRx6KYik" target="_blank">LẠ LÙNG </a></li>
+            <li><a href="https://youtu.be/Zzn9-ATB9aU?si=GhVFTcLBHCGgt0gA" target="_blank">Nàng Thơ</a></li>
+            <li><a href="https://www.youtube.com/watch?v=5DqZ2A9z0yU" target="_blank">Có Chàng Trai Viết Lên Cây – Phan Mạnh Quỳnh</a></li>
+            <li><a href="https://youtu.be/z96SGB47Po4?si=sQrXaymRSB1-hR6S" target="_blank">HongKong1</a></li>
+        </ul>
+    </div>
+
+    <!-- LO LẮNG -->
+    <div id="anxious" class="playlist">
+        <h2>😟 Nhạc khi lo lắng</h2>
+        <ul>
+            <li><a href="https://youtu.be/rIXhXaQ8tiM?si=ym2sD3iWF_VHSEaJ" target="_blank">ngày đầu tiên</a></li>
+            <li><a href="https://youtu.be/488ceQWoGGw?si=CqT5RMsJ-yQXb8qP" target="_blank">nắng ấm xa dần</a></li>
+            <li><a href="https://youtu.be/5e7e_KZINA4?si=LnYlDGBjsY7oBh5f" target="_blank">đưa nhau đi trốn </a></li>
+            <li><a href="https://youtu.be/wHF3Jv6Gk2o?si=CHH2H-zFjwc6gorU" target="_blank">sau tất cả </a></li>
+            <li><a href="https://youtu.be/8g5iIG2VvnQ?si=fKB-62TZZ2GSvghg" target="_blank">Bình Yên Những Phút Giây</a></li>
+        </ul>
+    </div>
+
+    <!-- CHÁN NẢN -->
+    <div id="bored" class="playlist">
+        <h2>😐 Nhạc khi chán nản</h2>
+        <ul>
+            <li><a href="https://youtu.be/x_hU9S9iQ2g?si=ulqrwh4yLhlRp8ha" target="_blank">một mình</a></li>
+            <li><a href="https://youtu.be/gUr4qp6YGLs?si=eD3f0f2ffj_CQmrG" target="_blank">lang thang </a></li>
+            <li><a href="https://youtu.be/Ws-QlpSltr8?si=4JmSy0CKj0BeMn3S" target="_blank">trốn tìm </a></li>
+            <li><a href="https://youtu.be/g20t_K9dlhU?si=JEDG_zkWDrSrWPop" target="_blank">người lạ ơi </a></li>
+            <li><a href="https://youtu.be/LZN4I3K8SC0?si=7zIU-OaKBeTJhYUS" target="_blank">cứ chill thôi </a></li>
+        </ul>
+    </div>
+
+    <!-- STRESS -->
+    <div id="stress" class="playlist">
+        <h2>😖 Nhạc khi stress</h2>
+        <ul>
+            <li><a href="https://youtu.be/32sYGCOYJUM?si=8q7yhFxJ_sow-Rk8" target="_blank">CHẠY NGAY ĐI</a></li>
+            <li><a href="https://youtu.be/iy53wPnNCYU?si=5eCcCAz4MBaRBuNl" target="_blank">  Đi Để Trở Về </a> </li>
+            <li><a href="https://youtu.be/Pys2iOT9rpw?si=dy5UrnyKVEZoLpgT" target="_blank">WEAN – shhhhhhh.. feat tlinh</a></li>
+            <li><a href="https://youtu.be/jgZkrA8E5do?si=gEbK7fnsypeb4cDl" target="_blank">TOULIVER x BINZ - "BIGCITYBOI"</a></li>
+            <li><a href="https://youtu.be/6t-MjBazs3o?si=1vNr4mOyUTgndSrO" target="_blank">CÓ CHẮC YÊU LÀ ĐÂY</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function showPlaylist(id) {
+        const lists = document.querySelectorAll('.playlist');
+        lists.forEach(list => list.style.display = 'none');
+
+        document.getElementById(id).style.display = 'block';
+        }
+    </script>
+  
+        <footer>© 2026 hoangsonmusic</footer>
+  
+
+</body>
+</html>
